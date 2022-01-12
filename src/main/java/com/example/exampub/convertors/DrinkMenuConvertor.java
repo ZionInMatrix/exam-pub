@@ -13,7 +13,6 @@ public class DrinkMenuConvertor {
         List<DrinkMenuRest> drinkMenuList = new ArrayList<>();
         for (DrinkMenu drinkMenu : allDrinks) {
             drinkMenuList.add(toRest(drinkMenu));
-
         }
         return drinkMenuList;
     }
@@ -22,7 +21,6 @@ public class DrinkMenuConvertor {
         DrinkMenuRest rest = new DrinkMenuRest();
         rest.setProductName(drinkMenu.getProductName());
         rest.setPrice(drinkMenu.getPrice());
-        rest.setIsForAdult(drinkMenu.getIsForAdult());
         return rest;
     }
 }

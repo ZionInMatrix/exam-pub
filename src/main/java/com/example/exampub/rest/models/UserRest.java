@@ -13,6 +13,4 @@ public class UserRest {
     private Double pocket;
     private Boolean isActive;
     private Integer isAdult;
-
-
 }

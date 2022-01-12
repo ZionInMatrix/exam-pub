@@ -26,7 +26,6 @@ public class DrinkMenuServiceImpl implements DrinkMenuService {
     @Override
     public List<DrinkMenuRest> getAllDrinks() {
         logger.info("Get all Drinks");
-
-        return null;
+        return drinkMenuConvertor.toRest(drinkMenuRepository.findAll());
     }
 }

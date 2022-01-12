@@ -13,15 +13,4 @@ public class OrderItemRest {
     private Integer drinkMenu_ID;
     private Double amount;
     private Double price;
-
-    @Override
-    public String toString() {
-        return "OrderItemRest{" +
-                "id=" + id +
-                ", order_ID=" + order_ID +
-                ", drinkMenu_ID=" + drinkMenu_ID +
-                ", amount=" + amount +
-                ", price=" + price +
-                '}';
-    }
 }
