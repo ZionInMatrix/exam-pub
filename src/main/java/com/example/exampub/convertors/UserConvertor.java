@@ -18,17 +18,19 @@ public class UserConvertor {
         return userList;
     }
 
-    public UserRest toRest(User user) {
+    public UserRest toRest(User dao) {
         UserRest rest = new UserRest();
-        rest.setName(user.getName());
-        rest.setIsActive(user.getIsActive());
-        rest.setIsAdult(user.getIsAdult());
-        rest.setPocket(user.getPocket());
+        rest.setId(dao.getId());
+        rest.setName(dao.getName());
+        rest.setIsActive(dao.getIsActive());
+        rest.setIsAdult(dao.getIsAdult());
+        rest.setPocket(dao.getPocket());
         return rest;
     }
 
-    public UserWithOrdersRest toRest(User user) {
+    public UserWithOrdersRest toRestUserWithOrder(User user) {
         UserWithOrdersRest rest = new UserWithOrdersRest();
+        rest.setId(user.getId());
         rest.setName(user.getName());
         rest.setIsActive(user.getIsActive());
         rest.setIsAdult(user.getIsAdult());
@@ -37,5 +39,4 @@ public class UserConvertor {
         rest.setOrder(user.getOrder());
         return rest;
     }
-
 }

@@ -39,6 +39,6 @@ public class UserServiceImpl implements UserService {
             throw new UserServiceException("Can't find the id number");
         }
         logger.info("Getting user");
-        return userConvertor.toRest(user.get());
+        return userConvertor.toRestUserWithOrder(user.get());
     }
 }
