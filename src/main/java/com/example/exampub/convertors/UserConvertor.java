@@ -38,4 +38,11 @@ public class UserConvertor {
         rest.setOrder(user.getOrder());
         return rest;
     }
+
+    public User toRest(UserRest userRest) {
+        User user = new User();
+        user.setId(userRest.getId());
+        user.setOrder(userRest.getOrder());
+        return user;
+    }
 }

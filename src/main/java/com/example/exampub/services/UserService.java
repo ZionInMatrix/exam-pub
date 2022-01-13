@@ -6,9 +6,10 @@ import com.example.exampub.rest.models.UserWithOrdersRest;
 import java.util.List;
 
 public interface UserService {
-
     List<UserRest> getAllUsers();
 
     UserWithOrdersRest getUserWithOrdersByID(Integer id);
+
+    UserRest addUser(UserRest user);
 
 }

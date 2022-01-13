@@ -24,4 +24,9 @@ public class UserRestController {
         return userService.getUserWithOrdersByID(id);
     }
 
+    @RequestMapping(value = "/buy/validation", method = RequestMethod.POST)
+    private UserRest addUser(@RequestBody UserRest userRest) {
+        return userService.addUser(userRest);
+    }
+
 }

@@ -6,6 +6,7 @@ import com.example.exampub.repositories.UserRepository;
 import com.example.exampub.rest.models.UserRest;
 import com.example.exampub.rest.models.UserWithOrdersRest;
 import com.example.exampub.services.UserService;
+import com.example.exampub.services.ValidationService;
 import com.example.exampub.services.exceptions.UserServiceException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,6 +27,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserConvertor userConvertor;
 
+    @Autowired
+    private ValidationService validationService;
+
     @Override
     public List<UserRest> getAllUsers() {
         logger.info("Get all users");
@@ -40,5 +44,13 @@ public class UserServiceImpl implements UserService {
         }
         logger.info("Getting user");
         return userConvertor.toRestUserWithOrder(user.get());
+    }
+
+    @Override
+    public UserRest addUser(UserRest userRest) {
+        validationService.validate(userRest);
+        User user = userConvertor.toRest(userRest);
+        User save = userRepository.save(user);
+        return userConvertor.toRest(save);
     }
 }
