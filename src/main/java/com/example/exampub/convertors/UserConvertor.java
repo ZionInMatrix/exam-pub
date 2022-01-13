@@ -35,7 +35,6 @@ public class UserConvertor {
         rest.setIsActive(user.getIsActive());
         rest.setIsAdult(user.getIsAdult());
         rest.setPocket(user.getPocket());
-
         rest.setOrder(user.getOrder());
         return rest;
     }

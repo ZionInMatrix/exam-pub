@@ -1,7 +1,6 @@
 package com.example.exampub.rest.controllers;
 
 import com.example.exampub.rest.models.DrinkMenuRest;
-import com.example.exampub.rest.models.UserRest;
 import com.example.exampub.services.DrinkMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

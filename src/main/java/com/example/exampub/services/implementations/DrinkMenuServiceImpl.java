@@ -22,7 +22,6 @@ public class DrinkMenuServiceImpl implements DrinkMenuService {
     @Autowired
     private DrinkMenuConvertor drinkMenuConvertor;
 
-
     @Override
     public List<DrinkMenuRest> getAllDrinks() {
         logger.info("Get all Drinks");

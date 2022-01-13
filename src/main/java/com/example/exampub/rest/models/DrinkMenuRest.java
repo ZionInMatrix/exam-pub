@@ -11,4 +11,5 @@ public class DrinkMenuRest {
     private Integer id;
     private String productName;
     private Double price;
+    private Boolean isForAdult;
 }

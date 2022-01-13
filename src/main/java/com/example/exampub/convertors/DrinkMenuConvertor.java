@@ -19,8 +19,10 @@ public class DrinkMenuConvertor {
 
     public DrinkMenuRest toRest(DrinkMenu drinkMenu) {
         DrinkMenuRest rest = new DrinkMenuRest();
+        rest.setId(drinkMenu.getId());
         rest.setProductName(drinkMenu.getProductName());
         rest.setPrice(drinkMenu.getPrice());
+        rest.setIsForAdult(drinkMenu.getIsForAdult());
         return rest;
     }
 }
